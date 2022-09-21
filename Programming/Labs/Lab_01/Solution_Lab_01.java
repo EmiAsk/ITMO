@@ -74,6 +74,7 @@ public class Solution_Lab_01 {
         }
 
         // Вывод массива
+        System.out.print("Вывод массива:\n\n");
         for (int i = 0; i < N_ROWS; i++) {
             for (int j = 0; j < N_COLS; j++) {
                 System.out.printf("%.3f\t", a2[i][j]);
