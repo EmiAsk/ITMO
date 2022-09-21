@@ -5,7 +5,7 @@ import java.lang.Math;
 
 // Лабораторная по программированию №1
 
-public class Solution_Lab_01 {
+public class Solution {
 
     // Константы для 1го пункта
     public static final int MIN_VALUE_1 = 3;
