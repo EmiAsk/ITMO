@@ -6,6 +6,7 @@ cd lab0
 
 shopt -s globstar
 
+# ========= 1 ==========
 # Creating files
 touch beedrill3 lotad0 minccino6
 
@@ -95,7 +96,7 @@ cat >> minccino6 << EOF
 Urban
 EOF
 
-
+# ============ 2 =============
 chmod 644 beedrill3
 chmod 736 deerling6
 cd deerling6
@@ -126,6 +127,7 @@ chmod 737 butterfree
 chmod 004 seismitoad
 cd ..
 
+# ============== 3 ==============
 ln minccino6 scraggy4/seismitoadminccino
 ln -s scraggy4 Copy_85
 
@@ -157,16 +159,17 @@ cd ..
 
 ln -s lotad0 kricketune7/magnezonelotad
 
-# 4th point
+# ls -lR .
+# ========== 4 ===============
 errors="/tmp/s367064"
 touch $errors
 chmod 700 $errors
 
-echo -e "\n\n======== 4.1 =========\n"
-wc -l scraggy4/swanna scraggy4/tentacool | sort -nk1 | head -n 2 2>$errors
+echo -e "\n\n======== 4.1 =========\n" 
+wc -l scraggy4/swanna scraggy4/tentacool | sort -nrk1
 
 echo -e "\n\n======== 4.2 =========\n"
-ls -Rl . 2>/tmp/s367064 | sort -fk9,9 | tail -n3
+ls -Rl  2>/dev/null | sort -fk9,9 | tail -n3
 
 echo -e "\n\n======== 4.3 =========\n"
 # grep's flag -i used to ignore case
@@ -174,21 +177,22 @@ cat kricketune7/yanmega kricketune7/magnezone kricketune7/herdier scraggy4/swann
 
 echo -e "\n\n======== 4.4 =========\n"
 # ls's -S flag used to sort by size, -r for reversed order
-ls -ls scraggy4
+ls -lS scraggy4
 
 echo -e "\n\n======== 4.5 =========\n"
 # -d ls flag is used to display dirs as plain files
+#ls -ldt * */* | head -n2
 ls -ldt * */* | head -n2
 
 echo -e "\n\n======== 4.6 =========\n"
-cat **/*6 2>&1
+cat **/*6 2>&1 | sort -f  
 
-# 5th point
+# ============== 5 ================
 rm -f lotad0
 rm -f scraggy4/swanna
 rm -f kricketune7/magnezonelot*
 rm -f scraggy4/seismitoadmincci*
 chmod -R 700 scraggy4
 rm -Rf scraggy4
-#chmod -R 700 kricketune7/gorebyss
+chmod -R 700 kricketune7/gorebyss
 rm -Rf kricketune7/gorebyss
