@@ -1,81 +1,57 @@
-# def convert_array(obj: list, indent=0):
-#     result = ''
-#
-#     for value in obj:
-#         if isinstance(value, dict):
-#             part = convert_dict(value)
-#         elif isinstance(value, list):
-#             part = convert_array(value, indent + 2)
-#         else:
-#             part = value
-#
-#         result += (' ' * indent) + f'- {part}\n'
-#
-#     return result if result else '[]'
-#
-#
-# def convert_dict(obj: dict, indent=0):
-#     result = ''
-#
-#     for k, (key, value) in enumerate(obj.items()):
-#         if isinstance(value, dict):
-#             part = convert_dict(value, indent + 6)
-#         elif isinstance(value, list):
-#             part = convert_array(value, indent + 2)
-#         else:
-#             if k == 0:
-#                 result += f'{key}: {value}\n'
-#                 continue
-#             result += (' ' * indent) + f'{key}: {value}\n'
-#             continue
-#
-#         if k == 0:
-#             result += f'{key}:\n{part}\n'
-#             continue
-#
-#         result += (indent * ' ') + f'{key}:\n{part}\n'
-#
-#     return result if result else '{}'
 def convert_array(obj: list, indent=0):
     result = []
 
     for value in obj:
+
         if isinstance(value, dict):
             part = convert_dict(value, indent + 2)
+
         elif isinstance(value, list):
             part = convert_array(value, indent + 2)
+            part = ('- ' * bool(value)) + part
+
         else:
             part = str(value)
 
         result.append(part)
 
+    if not result:
+        return '[]'
+
     sep = '\n' + indent * ' ' + '- '
 
-    return sep[1:] + sep.join(result)
+    return sep.join(result)
 
 
 def convert_dict(obj: dict, indent=0):
     result = []
 
-    for k, (key, value) in enumerate(obj.items()):
+    for key, value in obj.items():
+
         if isinstance(value, dict):
             part = convert_dict(value, indent + 2)
+            spaces = ' ' * (indent + 2)
+            result.append(f'{key}:\n{spaces}{part}')
+
         elif isinstance(value, list):
             part = convert_array(value, indent + 2)
+            spaces = ' ' * (indent + 2)
+            result.append(f'{key}:\n{spaces}- {part}')
+
         else:
-            result.append((' ' * indent) + f'{key}: {value}')
+            result.append(f'{key}: {value}')
             continue
 
-        result.append((indent * ' ') + f'{key}:\n{part}\n')
-
     sep = '\n' + indent * ' '
-    return sep + sep.join(result)
+    return sep.join(result)
 
 
 def convert_to_yaml(json_object):
+
     if isinstance(json_object, dict):
         return convert_dict(json_object)
+
     elif isinstance(json_object, list):
-        return convert_array(json_object)
+        return '- ' + convert_array(json_object)
 
     return str(json_object)
