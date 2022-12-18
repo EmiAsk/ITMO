@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>D:/Java Projects/Lab03</OriginalElement>
+  <nodes>
+    <node x="396.0" y="697.0">enums.SpaceState</node>
+    <node x="507.57291666666663" y="-115.0">persons.Person</node>
+    <node x="470.0" y="356.0">misc.Travelers</node>
+    <node x="641.0" y="697.0">enums.Emotions</node>
+    <node x="28.5" y="356.0">interfaces.OpenedClosed</node>
+    <node x="225.0" y="370.0">interfaces.Emotional</node>
+    <node x="-155.0" y="520.0">misc.Gate</node>
+    <node x="225.0" y="506.0">bodyParts.Eyes</node>
+    <node x="414.0" y="166.5">persons.Flower</node>
+    <node x="-155.0" y="697.0">enums.OpenedClosedState</node>
+    <node x="138.0" y="697.0">enums.LocationType</node>
+    <node x="-155.0" y="81.0">locations.Home</node>
+    <node x="46.0" y="832.0">misc.Fence</node>
+    <node x="723.0" y="137.0">persons.LittleFigurine</node>
+    <node x="-11.5" y="-115.0">locations.Location</node>
+    <node x="-155.0" y="832.0">Main</node>
+    <node x="60.0" y="81.0">locations.Street</node>
+    <node x="530.0" y="109.0">persons.Dunno</node>
+    <node x="736.96875" y="-59.0">interfaces.Looking</node>
+    <node x="5.0" y="506.0">bodyParts.Mouth</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="misc.Gate" target="interfaces.OpenedClosed" relationship="REALIZATION">
+      <point x="0.0" y="-59.0" />
+      <point x="-85.0" y="476.0" />
+      <point x="105.0" y="476.0" />
+      <point x="0.0" y="45.0" />
+    </edge>
+    <edge source="persons.Flower" target="persons.Person" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.5" />
+      <point x="462.0" y="89.0" />
+      <point x="607.5729166666666" y="89.0" />
+      <point x="0.0" y="87.0" />
+    </edge>
+    <edge source="bodyParts.Mouth" target="interfaces.Emotional" relationship="REALIZATION">
+      <point x="0.0" y="-73.0" />
+      <point x="105.0" y="486.0" />
+      <point x="325.0" y="486.0" />
+      <point x="0.0" y="31.0" />
+    </edge>
+    <edge source="persons.Dunno" target="persons.Person" relationship="GENERALIZATION">
+      <point x="-43.25" y="-73.0" />
+      <point x="573.25" y="89.0" />
+      <point x="607.5729166666666" y="89.0" />
+      <point x="0.0" y="87.0" />
+    </edge>
+    <edge source="locations.Home" target="locations.Location" relationship="GENERALIZATION">
+      <point x="0.0" y="-115.0" />
+      <point x="-57.5" y="56.0" />
+      <point x="78.5" y="56.0" />
+      <point x="0.0" y="73.0" />
+    </edge>
+    <edge source="persons.LittleFigurine" target="persons.Person" relationship="GENERALIZATION">
+      <point x="-39.5" y="-45.0" />
+      <point x="762.5" y="89.0" />
+      <point x="607.5729166666666" y="89.0" />
+      <point x="0.0" y="87.0" />
+    </edge>
+    <edge source="bodyParts.Mouth" target="interfaces.OpenedClosed" relationship="REALIZATION">
+      <point x="0.0" y="-73.0" />
+      <point x="0.0" y="45.0" />
+    </edge>
+    <edge source="locations.Street" target="locations.Location" relationship="GENERALIZATION">
+      <point x="0.0" y="-115.0" />
+      <point x="214.5" y="56.0" />
+      <point x="78.5" y="56.0" />
+      <point x="0.0" y="73.0" />
+    </edge>
+    <edge source="bodyParts.Eyes" target="interfaces.OpenedClosed" relationship="REALIZATION">
+      <point x="0.0" y="-73.0" />
+      <point x="325.0" y="466.0" />
+      <point x="105.0" y="466.0" />
+      <point x="0.0" y="45.0" />
+    </edge>
+    <edge source="bodyParts.Eyes" target="interfaces.Emotional" relationship="REALIZATION">
+      <point x="0.0" y="-73.0" />
+      <point x="0.0" y="31.0" />
+    </edge>
+    <edge source="persons.Dunno" target="interfaces.Looking" relationship="REALIZATION">
+      <point x="43.25" y="-73.0" />
+      <point x="659.75" y="79.0" />
+      <point x="815.96875" y="79.0" />
+      <point x="0.0" y="31.0" />
+    </edge>
+    <edge source="persons.LittleFigurine" target="interfaces.Looking" relationship="REALIZATION">
+      <point x="39.5" y="-45.0" />
+      <point x="841.5" y="79.0" />
+      <point x="815.96875" y="79.0" />
+      <point x="0.0" y="31.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.6064139941690962" showDependencies="false" x="370.0" y="389.5" />
+  <SelectedNodes>
+    <node>locations.Street</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
